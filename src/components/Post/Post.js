@@ -8,17 +8,18 @@ function Post() {
     const [isLoaded, setIsLoaded] = useState(false); // datanın gelip gelmediğinin kontrol etmek için. en başta data false dur yani loaded değildir
     const [postList, setPostList] = useState([]); //app ayağa kalktığında postcomponent nın postlisti boş liste olacak
 
-    useEffect(()=> {
+    useEffect(() => {
         fetch("/posts")
         .then(res => res.json()) //response u parse ediyor
         .then( // iki seçenek var ya data geldi yada error geldi
             (result) => {
                 setIsLoaded(true);
-                setPostList(result);
+                setPostList(result)
             },
             (error) => {
+                console.log(error)
                 setIsLoaded(true); // true olmasının sebebi api call tamamlandı sayfa yükleniyor halde kalmasın diye
-                setError(result);
+                setError(error);
             }
         )
      }, [])
