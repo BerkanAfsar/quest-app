@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-//import App from './App';
-import Post from '../src/components/Post/Post';
+import App from './App';
+//import Post from '../src/components/Post/Post';
 import reportWebVitals from './reportWebVitals';
 
 //const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,7 +14,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Post />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 )
